@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta
+      name="description"
+      content="A simple password generator build-in Javascript"
+    />
+    <meta charset="utf-8" />
+    <title>A simple password generator</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+    <div id="container">
+      <div id="wrapper">
+        <div class="form">
+          <header id="header">
+            <h1 id="title">Password Generator</h1>
+          </header>
+          <section class="generated_password-wrapper">
+            <div id="generated_password"></div>
+            <button type="button" class="copyToClipboard">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="45"
+                height="45"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M17.391 3l2.609 2.808v7.736c0 4.106-6 2.456-6 2.456s1.518 6-2.638 6h-7.362v-16.192l2.666-2.808h-4.666v21h20v-21h-4.609zm2.609 19h-3.824c1.377-1.103 2.751-2.51 3.824-3.865v3.865zm-14.297-15h12.651l-3.312-3.569v-.41c.001-1.668-1.352-3.021-3.021-3.021-1.667 0-3.021 1.332-3.021 3l.001.431-3.298 3.569zm6.297-5c.553 0 1 .448 1 1s-.447 1-1 1-1-.448-1-1 .447-1 1-1z"
+                />
+              </svg>
+              <span>COPY THAT!</span>
+            </button>
+          </section>
+          <section id="password_generator">
+            <div class="card password_length_select">
+              <label>Password length:</label>
+              <input min="5" max="50" value="12" id="range" type="range" />
+              <span id="password_length--span">12</span>
+            </div>
+          </section>
+          <div class="options-row">
+            <div class="column">
+              <section id="password_generator">
+                <div class="card password_uppercase">
+                  <label>Uppercase letters:</label>
+                  <div class="selectbox">
+                    <button class="selectbox-inner active likeRipple-sm" id="uppercase">
+                      <span></span>
+                    </button>
+                  </div>
+                </div>
+              </section>
+              <section id="password_generator">
+                <div class="card password_uppercase">
+                  <label>Lowercase letters:</label>
+                  <div class="selectbox">
+                    <button class="selectbox-inner active likeRipple-sm" id="lowercase">
+                      <span></span>
+                    </button>
+                  </div>
+                </div>
+              </section>
+            </div>
+            <div class="column">
+              <section id="password_generator">
+                <div class="card password_uppercase">
+                  <label>Numbers:</label>
+                  <div class="selectbox">
+                    <button class="selectbox-inner active likeRipple-sm" id="numbers">
+                      <span></span>
+                    </button>
+                  </div>
+                </div>
+              </section>
+              <section id="password_generator">
+                <div class="card password_uppercase">
+                  <label>Symbols:</label>
+                  <div class="selectbox">
+                    <button class="selectbox-inner active likeRipple-sm" id="symbols">
+                      <span></span>
+                    </button>
+                  </div>
+                </div>
+              </section>
+            </div>
+          </div>
+        </div>
+        <button type="button" id="generate-button" class="likeRipple">GENERATE</button>
+      </div>
+    </div>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>
